@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - Udantas</title>
+     <link rel="icon" type="image/png" href="tmp-icon.png" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000000;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Diamond crosshatch pattern */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 20px,
+                    rgba(255,255,255,0.015) 20px,
+                    rgba(255,255,255,0.015) 21px
+                ),
+                repeating-linear-gradient(
+                    -45deg,
+                    transparent,
+                    transparent 20px,
+                    rgba(255,255,255,0.015) 20px,
+                    rgba(255,255,255,0.015) 21px
+                );
+            z-index: -1;
+        }
+
+        .main-content {
+            text-align: center;
+            width: 100%;
+            max-width: 1400px;
+            padding: 0 20px;
+        }
+
+        .title {
+            font-size: 8.5rem;
+            font-weight: 900;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-shadow: 
+                0 0 30px rgba(255, 204, 102, 0.9),
+                0 0 60px rgba(255, 204, 102, 0.6),
+                0 0 90px rgba(255, 204, 102, 0.3);
+            line-height: 0.85;
+            margin-bottom: 3rem;
+        }
+
+        .description {
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1.6;
+            color: #e5e5e5;
+            margin-bottom: 0.5rem;
+        }
+
+        .description:last-of-type {
+            margin-bottom: 4rem;
+        }
+
+        .contact-info {
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: #d0d0d0;
+            margin-bottom: 2rem;
+        }
+
+        .email-link {
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .email-link:hover {
+            color: #ffcc66;
+            text-shadow: 0 0 10px rgba(255, 204, 102, 0.5);
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.95rem;
+            color: #808080;
+            font-weight: 300;
+        }
+
+        /* Tablet styles */
+        @media (max-width: 1024px) {
+            .title {
+                font-size: 6rem;
+                margin-bottom: 2.5rem;
+            }
+            
+            .description {
+                font-size: 1.3rem;
+            }
+            
+            .contact-info {
+                font-size: 1.1rem;
+            }
+            
+            .footer {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Mobile landscape */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 4.5rem;
+                margin-bottom: 2rem;
+            }
+            
+            .description {
+                font-size: 1.1rem;
+            }
+            
+            .description:last-of-type {
+                margin-bottom: 3rem;
+            }
+            
+            .contact-info {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .footer {
+                font-size: 0.85rem;
+                bottom: 1.5rem;
+            }
+        }
+
+        /* Mobile portrait */
+        @media (max-width: 480px) {
+            .main-content {
+                padding: 0 15px;
+            }
+            
+            .title {
+                font-size: 3rem;
+                margin-bottom: 1.5rem;
+                letter-spacing: 0.01em;
+            }
+            
+            .description {
+                font-size: 1rem;
+            }
+            
+            .description:last-of-type {
+                margin-bottom: 2.5rem;
+            }
+            
+            .contact-info {
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+            }
+            
+            .footer {
+                font-size: 0.8rem;
+                bottom: 1rem;
+                text-align: center;
+                padding: 0 10px;
+            }
+        }
+
+        /* Very small screens */
+        @media (max-width: 320px) {
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .description {
+                font-size: 0.9rem;
+            }
+            
+            .contact-info {
+                font-size: 0.85rem;
+            }
+            
+            .footer {
+                font-size: 0.75rem;
+            }
+        }
+
+        /* Large desktop screens */
+        @media (min-width: 1400px) {
+            .title {
+                font-size: 10rem;
+                margin-bottom: 3.5rem;
+            }
+            
+            .description {
+                font-size: 1.8rem;
+            }
+            
+            .description:last-of-type {
+                margin-bottom: 4.5rem;
+            }
+            
+            .contact-info {
+                font-size: 1.4rem;
+            }
+            
+            .footer {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <h1 class="title">COMING SOON</h1>
+        
+        <p class="description">A new era of innovation is just around the corner.</p>
+        <p class="description">Thank you for your patience.</p>
+        
+        <p class="contact-info">
+            Let's talk! Drop us a line at <a href="mailto:business@udantas.com" class="email-link">business@udantas.com</a>
+        </p>
+    </div>
+    
+    <div class="footer">
+        copyright © 2024     Udantas. All rights reserved
+    </div>
+</body>
+</html>
